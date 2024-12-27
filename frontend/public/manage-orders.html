@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <style>body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    width: 80%;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .header {
+    width: 97%;
+    background-color: transparent;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .header img {
+    height: 30px;
+  }
+
+  .header nav {
+    display: flex;
+    gap: 50px;
+    font-weight: bold;
+  }
+
+  .header nav a {
+    text-decoration: none;
+    color: #333;
+    letter-spacing: 2px;
+  } 
+  
+  .header1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .header1 h1 {
+    font-size: 24px;
+    margin: 0;
+  }
+  
+  .header1 .toggle1 {
+    display: flex;
+    align-items: center;
+  }
+  
+  .toggle1 input {
+    margin-left: 10px;
+  }
+  
+  .tabs {
+    display: flex;
+    margin-top: 20px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .tab {
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  .tab.active {
+    border-bottom: 2px solid #1dbf73;
+    color: #1dbf73;
+  }
+  
+  .gig-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .gig-table th, .gig-table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .gig-table th {
+    background-color: #f9f9f9;
+  }
+  
+  .gig-table img {
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+    vertical-align: middle;
+  }
+  
+  .create-gig {
+    background-color: #1dbf73;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  .footer {
+    margin-top: 20px;
+    text-align: right;
+    font-size: 11px;
+    margin-right: 135px;
+  }
+  
+  .footer a {
+    color: #1dbf73;
+    text-decoration: none;
+  }
+
+  .toggle {
+  appearance: none;
+  position: relative;
+  display: inline-block;
+  box-sizing: content-box;
+  width: 2em;
+  height: 1em;
+  padding: 0.2em;
+  border: none;
+  cursor: pointer;
+  border-radius: 1.5em;
+  overflow: hidden;
+  background-color: #e1e8f2;
+  transition: background ease 0.3s;
+}
+
+.toggle:before {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: 1;
+  width: 1em;
+  height: 1em;
+  font-family: system-ui;
+  font-size: 1em;
+  line-height: 1em;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-indent: -2em;
+  word-spacing: 1em;
+  text-shadow: -1px -1px rgba(0,0,0,0.15);
+  white-space: nowrap;
+  background: #fff;
+  color: #fff;
+  border-radius: 1.5em;
+  transition: transform cubic-bezier(0.3, 1.5, 0.7, 1) 0.3s;
+}
+
+.toggle:checked {
+  background-color: #4CD964;
+}
+
+.toggle:checked:before {
+  transform: translateX(1em);
+}
+  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gigs</title>
+   
+</head>
+<body>
+  <div class="header">
+    <img src="../graphic design img/fiverr.png" alt="Fiverr Logo">
+    <nav>
+        <a href="#">Dashboard</a>
+        <a href="#">My Business</a>
+        <a href="#">Growth & Marketing</a>
+        <a href="#">Analytics</a>
+    </nav>
+    <div class="profile">
+        <img src="/img/test4.jpg" alt="Profile Picture">
+    </div>
+</div>
+    <div class="container">
+        <div class="header1">
+            <h1>Gigs</h1>
+            <div class="toggle1">
+                <span>Accepting Custom Orders</span>
+                <input class="toggle" type="checkbox">
+            </div>
+        </div>
+        <div class="tabs">
+            <div class="tab active">ACTIVE</div>
+            <div class="tab" style="color: grey;">PENDING APPROVAL</div>
+            <div class="tab" style="color: grey;">REQUIRES MODIFICATION</div>
+            <div class="tab" style="color: grey;">DRAFT</div>
+            <div class="tab" style="color: grey;">DENIED</div>
+            <div class="tab" style="color: grey;">PAUSED</div>
+        </div>
+        <table class="gig-table">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th style="color: grey;">GIG</th>
+                    <th style="color: grey;">IMPRESSIONS</th>
+                    <th style="color: grey;">CLICKS</th>
+                    <th style="color: grey;">ORDERS</th>
+                    <th style="color: grey;">CANCELLATIONS</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td><img src="/img/img (61).png" alt="Gig Image"> do user testing for your application</td>
+                    <td>42</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0%</td>
+                </tr>
+            </tbody>
+        </table>
+        <button class="create-gig">CREATE A NEW GIG</button>
+      
+    </div>
+    <div class="footer">
+      <a href="#">What does your Gig® status mean?</a>
+  </div>
+</body>
+</html>

@@ -1,0 +1,160 @@
+<!-- frontend/pages/login.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f5f5f5;
+        }
+        .container {
+            display: flex;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+            width: 50%;
+            height: 90%;
+        }
+
+        .left,
+.right {
+    flex: 1; 
+}
+
+        .left {
+            background-image: url('../graphic design img/login-bg.png'); 
+            background-size: cover;
+            background-position: center; 
+            background-repeat: no-repeat;
+            padding: 20px; 
+            color: white; 
+            display: flex; 
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+
+
+        .left h1 {
+            margin: 0 0 10px 0;
+            
+            
+        }
+        .left ul {
+            list-style: none;
+            padding: 0;
+        }
+        .left ul li {
+            margin: 10px 0;
+        }
+        .right {
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center; 
+            position: relative; 
+        }
+
+        .right h2 {
+            position: absolute; 
+            top: 30px; 
+            left: 36%; 
+            transform: translateX(-50%); 
+            margin: 0 0 20px 0; 
+        }
+
+        .right h5 {
+            position: absolute;
+            top: 80px; 
+            left: 32%; 
+            transform: translateX(-50%);
+            margin: 0 0 20px 0; 
+            color: dimgray;
+        }
+
+
+        .right .buttons {
+            display: flex;
+            flex-direction: column;
+            width: 80%;
+            margin-top: 70px;
+        }
+
+        .right .buttons button {
+            display: flex;
+            align-items: center; 
+            justify-content: flex-start; 
+            gap: 10px; 
+            background-color: transparent;
+            
+            color: black;
+            border: 1px solid black;
+            padding: 10px 15px;
+            font-size: 16px;
+            cursor: pointer;
+            width: 100%; 
+            max-width: 300px; 
+            margin: 10px auto; 
+            border-radius: 5px; 
+        }
+
+        .right .buttons button img {
+            width: 20px; 
+            height: 20px; 
+            display: inline-block;
+        }
+
+
+        .right .terms {
+            margin-top: 100px;
+            font-size: 12px;
+            text-align: start;
+            align-self: flex-end;
+            color: dimgray;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+            <h1>Success starts here</h1>
+            <ul>
+                <li>Over 700 categories</li>
+                <li>Quality work done faster</li>
+                <li>Access to talent and businesses across the globe</li>
+            </ul>
+        </div>
+        <div class="right">
+            <h2>Login to your account</h2>
+            <h5>Don't have an account? <a href="register.html">Join here</a></h5>
+            <div class="buttons">
+                
+                <a href="http://localhost:5000/auth/google">
+                <button class="google">
+                   
+                    <img src="../graphic design img/google-logo1.png" alt="Google Logo" class="google-logo" />
+                    Continue with Google
+                
+                </button>
+                </a>
+                <button class="email"><img src="../graphic design img/email-logo.png" alt="Email logo" class="email-logo" />Continue with email</button>
+                <button class="apple"><img src="../graphic design img/apple-logo.png" alt="Apple Logo" class="apple-logo" />Continue with Apple</button>
+                <button class="facebook"><img src="../graphic design img/facebook-logo.png" alt="Facebook Logo" class="facebook" />Continue with Facebook</button>
+            </div>
+            <div class="terms">
+                <p>By joining, you agree to the Fiverr <a href="#">Terms of Service</a> and to occasionally receive emails from us. Please read our <a href="#">Privacy Policy</a> to learn how we use your personal data.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Earnings</title>
+    <style>
+      body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+  color: dimgray;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.header a {
+  color: #0073b1;
+  text-decoration: none;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.box {
+  width: 30%;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #fafafa;
+}
+
+.box h2 {
+  margin: 0 0 10px 0;
+  font-size: 18px;
+}
+
+.box p {
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.box small {
+  display: block;
+  margin-top: 10px;
+  color: #888;
+}
+
+.box button, .box a {
+  display: block;
+  margin-top: 20px;
+  padding: 10px;
+  text-align: center;
+  background-color: #aebcc3;
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.box a {
+  background-color: transparent;
+  color: #454849;
+  text-decoration: underline;
+  
+}
+
+.activity {
+  margin-top: 20px;
+}
+
+.activity select {
+  padding: 10px;
+  margin-right: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.activity table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.activity table, .activity th, .activity td {
+  border: 1px solid #ddd;
+}
+
+.activity th, .activity td {
+  padding: 10px;
+  text-align: left;
+}
+
+.activity th {
+  background-color: #f5f5f5;
+}
+
+.activity .no-results {
+  text-align: center;
+  padding: 20px;
+  color: #888;
+}
+
+.email-report {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+.email-report a {
+  color: #0073b1;
+  text-decoration: none;
+}
+
+.results { text-align: center; } .results table { width: 100%; border-collapse: collapse; margin-top: 20px; } .results th, .results td { border: 1px solid #ddd; padding: 10px; text-align: left; } .results th { background-color: #f5f5f5; } .email-report { display: block; text-align: right; margin-top: 10px; color: #0073b1; }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Earnings</h1>
+            <a href="#">Learn more about this page</a>
+        </div>
+        <div class="content">
+            <div class="box">
+                <h2>Available funds</h2>
+                <p>$0.00</p>
+                <small>Balance available for use</small>
+                <button disabled>Withdraw balance</button>
+                <a href="#">Manage payout methods</a>
+            </div>
+            <div class="box">
+                <h2>Future payments</h2>
+                <p>$0.00</p>
+                <small>Payments being cleared</small>
+                <p>$0.00</p>
+                <small>Payments for active orders</small>
+            </div>
+            <div class="box">
+                <h2>Earnings & expenses</h2>
+                <p>$0.00</p>
+                <small>Earnings to date</small>
+                <p>$0.00</p>
+                <small>Expenses to date</small>
+            </div>
+        </div>
+        <div class="activity">
+            <select>
+                <option>Date range</option>
+            </select>
+            <select>
+                <option>Activity</option>
+            </select>
+            <div class="no-results">Showing activity</div>
+        </div>
+        <div class="email-report">
+            <a href="#">Email report</a>
+        </div>
+        <div class="results"> 
+           <table>
+             <thead>
+               <tr>
+                 <th>Date</th>
+                  <th>Activity</th>
+                   <th>Description</th> 
+                   <th>From</th> 
+                   <th>Order</th> 
+                   <th>Amount</th>
+                   </tr> 
+                  </thead>
+                   <tbody>
+                     <tr> 
+                      <td colspan="6">No results found.</td> 
+                    </tr> 
+                  </tbody>
+                 </table>
+    </div>
+
+</body>
+</html>

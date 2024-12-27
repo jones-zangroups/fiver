@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Orders</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            width: 97%;
+            background-color: transparent;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .header img {
+            height: 30px;
+        }
+
+        .header nav {
+            display: flex;
+            gap: 50px;
+            font-weight: bold;
+        }
+
+        .header nav a {
+            text-decoration: none;
+            color: #333;
+            letter-spacing: 2px;
+        }           
+
+        .title-container {
+            width: 80%;
+            margin: 20px auto;
+            padding: 10px 0;
+        }
+
+        .title-container h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+
+
+        .nav {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .nav a.grey {
+            color: grey;
+        }
+
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .orders table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .orders th, .orders td {
+            padding: 12px 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .orders th {
+            background-color: #f9f9f9;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .orders td {
+            background-color: #fff;
+        }
+
+        .no-orders {
+            text-align: center;
+            padding: 20px;
+            color: #888;
+            font-style: italic;
+        }
+
+        .profile img {
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+        }
+
+
+        .search {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end; 
+            margin-bottom: 20px;
+            margin-top: -40px;
+            background-color: transparent;
+        }
+
+
+        .search input {
+            padding: 5px;
+            background-color: transparent;
+            border: none; 
+            border-bottom: 1px solid #ddd; 
+            border-radius: 0; 
+            width: 200px;
+            outline: none; 
+        }
+
+
+        .search-container {
+            position: relative;
+            display: inline-block;
+        }
+
+        input[type="text"] {
+            padding-right: 30px; 
+        }
+
+        .search-icon {
+            position: absolute;
+            color: grey;
+            right: 10px; 
+            top: 50%;
+            transform: translateY(-50%);
+            pointer-events: none; 
+        }
+
+    </style>
+    <head> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="header">
+        <img src="../graphic design img/fiverr.png" alt="Fiverr Logo">
+        <nav>
+            <a href="#">Dashboard</a>
+            <a href="#">My Business</a>
+            <a href="#">Growth & Marketing</a>
+            <a href="#">Analytics</a>
+        </nav>
+        <div class="profile">
+            <img src="/img/test4.jpg" alt="Profile Picture">
+        </div>
+    </div>
+
+    <!-- New Title, Search, and Navigation Outside the Container -->
+    <div class="title-container">
+        <h1>Manage Orders</h1>
+        <div class="search">
+          <div class="search-container">
+            <input type="text" placeholder="Search My History...">
+            <i class="fas fa-search search-icon"></i>
+        </div>
+        
+        </div>
+        <div class="nav">
+            <a href="#">Priority Orders</a>
+            <a class="grey" href="#">Active</a>
+            <a class="grey" href="#">Late</a>
+            <a class="grey" href="#">Delivered</a>
+            <a class="grey" href="#">Completed</a>
+            <a class="grey" href="#">Cancelled</a>
+            <a class="grey" href="#">Starred</a>
+        </div>
+    </div>
+
+    <!-- Main Container -->
+    <div class="container">
+        <div class="orders">
+            <table>
+                <thead>
+                    <tr>
+                        <th style="color: grey;">Buyer</th>
+                        <th style="color: grey;">Gig</th>
+                        <th style="color: grey;">Due On</th>
+                        <th style="color: grey;">Total</th>
+                        <th style="color: grey;">Note</th>
+                        <th style="color: grey;">Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td colspan="6" class="no-orders">No priority orders to show.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
